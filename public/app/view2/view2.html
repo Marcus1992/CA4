@@ -1,0 +1,20 @@
+<section class="wikilist">
+    <div class="row">
+        <div class="search">
+            <h3 class="animated shake">This is the MEAN Wiki pages</h3>
+            <p class="animated bounceInDown">Data is fetched from a REST service, connected to MongoDB </p>
+            <label>search: </label>
+            <input ng-model="query" placeholder="Search wiki" autofocus/>
+
+            <table ng-show="query">
+                <tr>
+                    <th>Title</th>
+                </tr>
+                <tr ng-repeat="wikiPage in wiki | filter:query">
+                    <td><a href="#/{{wiki.indexOf(wikiPage)}}">{{wikiPage.title}}</a></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</section>
+

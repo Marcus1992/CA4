@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html ng-app="myAppRename" ng-controller="AppCtrl">
+<head>
+  <meta charset="utf8"/>
+  <title>{{title}}</title>
+  <link rel="stylesheet" href="/Components/stylesheets/style.css"/>
+  <link rel="stylesheet" href="/Components/stylesheets/flatly-bootstrap.min.css">
+  <link rel="stylesheet" href="/Components/stylesheets/animate.css"/>
+  <link href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
+  <script src="Components/Frameworks/angular/angular.min.js"></script>
+  <script src="Components/Frameworks/angular/angular-route.min.js"></script>
+  <script src="Components/Frameworks/angular/angular-animate.min.js"></script>
+</head>
+<body>
+
+    <div ng-controller="AppCtrl">
+          <nav class="navbar navbar-fixed-top navbar-inverse" role="navigation">
+                <div class="container">
+                      <div class="navbar-header">
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                                    aria-expanded="false" aria-controls="navbar">
+                              <span class="sr-only">Toggle navigation</span>
+                              <span class="icon-bar"></span>
+                              <span class="icon-bar"></span>
+                              <span class="icon-bar"></span>
+                            </button>
+                        <a class="navbar-brand" href="#">{{title}}</a>
+                      </div>
+
+                      <div id="navbar" class="collapse navbar-collapse">
+                            <ul class="nav navbar-nav">
+                                  <li><a class="active" href="#/view1">Wiki Pages</a></li>
+                                  <li><a href="#/viewCategories">Categories</a></li>
+                            </ul>
+                      </div>
+                </div>
+          </nav>
+
+          <div class="container">
+                <div ng-view="ng-view"></div>
+          </div>
+    </div>
+
+<script src="app/app.js"></script>
+<script src="app/viewWikiPage/view1.js"></script>
+<script src="app/viewCategories/categories.js"></script>
+<script src="app/components/controllers.js"></script>
+<script src="app/components/directives.js"></script>
+<script src="app/components/factories.js"></script>
+<script src="app/components/services.js"></script>
+<script src="app/components/filters.js"></script>
+</body>
+</html>
